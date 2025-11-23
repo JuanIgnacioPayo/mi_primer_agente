@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente Gemini Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Agente Conversacional</h3>
+            <div>
+                <button id="fullscreen-button">Pantalla Completa</button>
+                <button id="reset-button">Reiniciar</button>
+            </div>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="message agent-message">Hola, ¿en qué puedo ayudarte?</div>
+        </div>
+        <form id="chat-form" class="chat-input">
+            <input type="text" id="user-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
