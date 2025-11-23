@@ -7,13 +7,17 @@ from langchain_classic.agents import create_react_agent, AgentExecutor
 from langchain_core.tools import Tool
 from langchain_core.messages import AIMessage, HumanMessage
 from ddgs import DDGS
+from dotenv import load_dotenv
 import requests
 from bs4 import BeautifulSoup
 
 # 1. CONFIGURACIÓN
-# En un entorno real, usa variables de entorno (.env).
-# Pega aquí tu API Key de Google:
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAgnFaJ0PBwOsfHJgNs-qQLonmvbfiu7jE" # <--- REEMPLAZA ESTE VALOR CON TU CLAVE DE API REAL
+# Carga las variables de entorno desde un archivo .env
+load_dotenv()
+
+# La API Key de Google se carga automáticamente desde el archivo .env
+# Asegúrate de que tu archivo .env contenga una línea como:
+# GOOGLE_API_KEY="tu_clave_de_api_aqui"
 
 SOURCES_CONFIG = [
     # Medios Nacionales
